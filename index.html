@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>やる気UPs!</title>
+
+    <style type="text/css">
+        select {
+            font-size: 15px;
+            width: 110px;
+        }
+
+        input {
+            width: 50px;
+            height: 25px;
+        }
+
+        body {
+            text-align: center;
+            background-color: #F5F5DC;
+        }
+
+        .main {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            border: 1px solid #5b6267;
+            padding-bottom: 500px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .circle h2 {
+            position: relative;
+            display: inline-block;
+            padding: 16px 40px;
+            border-top: 2px solid #111;
+        }
+
+        .circle h2:before,
+        .circle h2:after {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #111;
+            position: absolute;
+            top: -5px;
+        }
+
+        .circle h2:before {
+            left: -4px;
+        }
+
+        .circle h2:after {
+            right: -4px;
+        }
+
+        label {
+            padding: 0.5em;
+            color: #010101;
+            border-bottom: 3px solid #516ab6;
+        }
+        img{
+            width: 100%;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>やる気UPs!</h2>
+    <div class="main">
+        <p>応援してもらいたい人を選択してください</ｐ>
+        <br><br>
+        <form method="POST" accept-charset="utf-8">
+            <label for="name">応援して欲しい人</label>:
+            <select name="who">
+                <option value="none"></option>
+                <option value="tanjiro">鬼滅の刃</option>
+                <option value="hamabe">浜辺美波</option>
+                <option value="koba">小林良輔</option>
+                <option value="iwa">岩ケ谷さん</option>
+                <option value=""></option>
+            </select>
+            <input type="submit" value="決定">
+            <div id="result"></div>
+        </form>
+    </div>
+</body>
+
+<script>
+    function result(){
+        var d =document.getElementById('result');
+        d.innerHTML=''
+    }
+</script>
+</html>
